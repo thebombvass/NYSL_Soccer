@@ -1,0 +1,681 @@
+/* Stylesheet for Megan's personal style */
+
+
+/*Type level selectors */
+
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+ 
+body {
+    font-family: 'Pragati Narrow', sans-serif;
+    background-color: rgb(233, 240, 240);
+}
+
+h1 {
+    font-size: 80px;
+    color: rgb(233, 240, 240);
+    text-align: left;
+    margin-top: 10px;
+    min-width: 570px;
+}
+
+h3 {
+    font-size: 40px;
+    color: #163836;
+    padding-bottom: 15px;
+}
+
+h4 {
+    font-size: 30px;
+    color: rgb(29, 31, 30);
+}
+
+h6 {
+    font-size:20px;
+    color: rgb(77, 83, 83);
+    margin-bottom: 20px;
+}
+
+nav {
+    margin-top: 120px;
+    width: 80%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-around;
+}
+
+figcaption {
+    font: caption;
+    font-style: italic;
+}
+
+details {
+    color: rgb(98, 100, 100);
+    outline: none;
+}
+
+summary {
+    outline: none;
+}
+
+footer {
+    background-color: #163836;
+    height: 60px;
+    padding: 20px;
+    text-align: right;
+    color: gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 80%;
+    max-width: 960px;
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 20px; 
+    border: 2px solid gray;
+
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+b {
+    font-family: ;
+}
+
+    /* click stuff*/
+
+    nav a {
+        position: relative;
+        top: 10px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(233, 240, 240);
+    }
+
+    nav :visited {
+        color: rgb(233, 240, 240);
+        text-decoration: none;
+    }
+
+    nav :hover {
+        color: #4d4d4d;
+    }
+
+    nav :active {
+        color: #3b7773;
+    }
+
+    #contactInfo :link {
+        color: rgb(29, 170, 180);
+    }
+
+    #contactInfo :visited {
+        color: rgb(29, 170, 180);
+    }
+
+/* form stuff*/
+input: {
+    font-size: 14px;
+}
+
+input[type=submit] {
+    font-size: 20px;
+    background-color: #3b7773;
+    border: 3px solid gray;
+    border-radius: 10px;
+    width: 200px;
+    min-width: 100px;
+    align-self: center;
+    margin: 20px;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(29, 170, 180);
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked:after {
+    -webkit-appearance: none;
+    content: 'X';
+    font-size: 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 3px;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: lightgray;
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+input[type=radio]:checked {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: rgb(29, 170, 180);
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+input[type=radio]:checked:after {
+    -webkit-appearance: none;
+    content: "•";
+    color: rgb(46, 56, 56);
+    font-size: 30px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -7px;
+    left: 3px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 10px;
+}
+
+select {
+    font-size: 14px;
+    background-color: white;
+}
+
+/* Class level selectors*/
+
+.headerWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* border: 2px dotted red; */
+}
+
+.headerTitle {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-bottom: 40px;
+    background-color: #163836;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), 95%, rgba(0,0,0,0));
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+}
+
+.bodyWrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid palevioletred; */
+}
+
+.logo {
+    position: static;
+    height: 100%;
+    width: 100%;
+}
+
+.logoBox {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-bottom:20px;
+    margin-right: 40px;
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+
+.headerPhotoBox {
+    display: flex;
+    justify-content: center;
+   /* border: 2px solid orange; */
+}
+
+.bodyWrapperRules {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid palevioletred; */
+}
+
+.bodyWrapperGameInfo {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid palevioletred; */
+}
+
+.rulesWrapper {
+    align-self: center;
+    width: 80%;
+    margin: 30px;
+}
+
+.rulesWrapper details {
+    font-size: 20px;
+    text-align: left;
+    color: #163836;
+    max-width: 1300px;
+    margin-bottom: 20px;
+}
+
+.rulesWrapper details summary {
+    font-size: 30px;
+    text-align: left;
+    color: rgb(26, 25, 25);
+}
+
+.rulesWrapper li {
+    margin-left: 50px;
+}
+
+.bodyWrapperRegistration {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid palevioletred; */
+}
+
+.bodyWrapperRegistration header, form {
+    align-self: center;
+}
+
+.letters {
+    list-style-type: lower-latin;
+}
+
+/*id level selectors*/
+
+#headerPhoto {
+    width:100%;
+    height:100%;
+    /* border: 3px solid purple; */
+}
+
+#upcomingEvents {
+    margin: 60px;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 400px;
+}
+
+#upcomingEvents h4 {
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+
+#aboutInfo {
+    font-size: 18px;
+    padding: 50px;
+    max-width: 700px;
+    text-align: left;
+    flex-direction: column;
+}
+
+#contactInfo {
+    font-size: 18px;
+    padding: 40px;
+    max-width: 500px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    margin: 20px;
+    margin-top: 60px;
+}
+
+#currentPage {
+    color: #3b7773;
+}
+
+    /*Photo styles */
+    #photoAboutBox {
+        margin-right: 40px;
+        align-self: center;
+    }
+
+    #photoContact {
+        margin: 20px;
+        align-self: center;
+    }
+
+    #photoContact img {
+        height: 350px;
+        width: 250px;
+    }
+
+    #photoHomeBox {
+        margin: 30px;
+        width: 50%;
+        align-self: center;
+    }
+
+    #photoHome {
+        width: 100%;
+        height: auto;
+    }
+
+    #photoAboutBox {
+        margin-left: 20px;
+    }
+
+/*table and 'Game Information' styles*/
+#gameSchedule td {
+    text-align: left;
+    font-size: 18px;
+    width: 150px;
+    vertical-align: top;
+}
+
+#gameSchedule th {
+    text-align: left;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#gameSchedule {
+    align-self: center;
+    margin: 30px;
+    margin-left: 40px;
+}
+
+#bigcell {
+    height: 60px;
+}
+
+#gameLocations {
+    font-size: 18px;
+    text-align:left;
+    align-self: center;
+    width: 1200px;
+}
+
+#gameLocations table {
+    display: inline;
+}
+
+#gameLocations td {
+    width: 280px;
+    vertical-align: top;
+}
+
+#additionalInfoGame {
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 40px;
+    width: 50%;
+    align-self: center; 
+    text-align: left;
+}
+
+#findMap {
+    float: right;
+    width: 600px;
+}
+
+    /*Registrations page styles */
+    #permissions {
+        font-size: 16px;
+        margin-bottom:20px;
+        max-width: 800px;
+    }
+
+    #playerNames {
+        display: flex;
+        width: 100%;
+    }
+
+    #playerNames input {
+        width: 35%;
+        min-width: 100px;
+        margin: 5px;
+    }
+
+    #playerNames p {
+        width: 10%;
+        min-width: 140px;
+    }
+
+    #streetAd {
+        width: 100%;
+        display: flex;
+    }
+
+    #streetAd input {
+        width: 80%;
+        margin: 5px;
+        min-width:200px;
+    }
+
+    #streetAd p {
+        width: 20%;
+        min-width: 120px;
+    }
+
+    #restOfAd {
+        width: 100%;
+        display: flex;
+    }
+
+    #restOfAd input {
+        width: 35%;
+        min-width: 100px;
+        margin: 5px;
+    }
+
+    #restOfAd p {
+        width: 10%;
+        min-width: 70px;
+    }
+
+    #bdayGend {
+        width: 100%;
+        display: flex;
+    }
+
+    #bdayGend input[name="birth_year"] {
+        width: 25%;
+        min-width: 100px;
+        margin: 5px;
+    }
+
+    #bdayGend select {
+        width: 10%;
+        margin: 5px;
+    }
+
+    #bdayGend p {
+        width: 10%;
+        min-width: 100px;
+    }
+
+    #gendResponse {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    #gendResponse p {
+        display: inline;
+        min-width: 0;
+    }
+
+    #grade {
+        width: 100%;
+        display: flex;
+    }
+
+    #grade p {
+        width: 20%;
+        min-width: 70px;
+    }
+
+    #gradeResponse {
+        width: 80%;
+        display:flex;
+        justify-content: space-around;
+        margin: 5px;
+    }
+
+    #gradeResponse p {
+        min-width: 0;
+        display: inline;
+    }
+
+    #parentNames {
+        width: 100%;
+        display: flex;
+    }
+    
+    #parentNames input {
+        width: 35%;
+        min-width: 100px;
+        margin: 5px;
+    }
+
+    #parentNames p {
+        width: 10%;
+        min-width: 200px;
+    }
+
+    #contactReg {
+        display: flex;
+        width: 100%;
+    }
+
+    #contactReg input {
+        width: 35%;
+        min-width: 100px;
+        margin: 5px;
+    }
+
+    #contactReg p {
+        width: 10%;
+        min-width: 120px;
+    }
+
+    #schoolsNearContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    #schoolsNearResponse {
+        display: flex;
+    }
+
+    #schoolsNearResponse {
+        display: flex;
+        width: 100%;
+    }
+
+    #schoolsNearResponse p {
+        width: 20%;
+        min-width: 160px;
+    }
+
+    #schoolsNearResponse select {
+        width: 30%;
+        margin: 5px;
+    }
+
+    #positionsContainer {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    /* PLEASE NOTE - class in the id section. fits because it is for form positioning*/
+    .positionsResponse {
+        display: flex;
+        width: 48%;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .positionsResponse div{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .positionsResponse div div{
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    #uniformContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    #uniformContainer div {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #uniformContainer p {
+        width: 20%;
+        min-width: 150px;
+    }
+
+    #uniformContainer select {
+        width: 30%;
+    }
